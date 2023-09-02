@@ -1,0 +1,648 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    /* Reset some default styling */
+body, h1, h2, h3, ul, li {
+    margin: 0;
+    padding: 0;
+}
+
+/* Style for the header */
+.site-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #f0f0f0;
+    border-bottom: 1px solid #ddd;
+}
+
+/* Style for the logo */
+.logo img {
+    max-height: 80px;
+    margin-left: 30px;
+    
+}
+
+/* Style for the categories navigation */
+/* .categories ul {
+    list-style: none;
+    display: flex;
+}
+
+.categories li {
+    margin-right: 20px;
+}
+
+.categories a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+} */
+
+/* Style for the search bar */
+.search input[type="text"] {
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    height: 15px;
+    width: 250px;
+}
+
+.search button , .content button {
+    padding: 8px 15px;
+    background-color: #ee9229;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:hover{
+    background-color: #ebb270;
+}
+
+/* Style for the icons */
+.icons a {
+    margin-left: 10px;
+    text-decoration: none;
+    color: #333;
+}
+
+.icons img {
+    max-height: 30px;
+    margin: auto;
+}
+
+.icons{
+    margin-right: 30px;
+}
+
+/* Style for the secondary navigation */
+.secondary-nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    background-color: #f0f0f0;
+    padding: 15px 0;
+}
+
+.secondary-nav li {
+    margin-right: 20px;
+}
+
+.secondary-nav a {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    font-size: 20px;
+    transition: color 0.3s;
+    padding: 14px;
+}
+
+.secondary-nav a:hover {
+    color: #ee9229;
+}
+
+.hero {
+    background-image: url('images/bg1.webp');
+    background-size: cover;
+    background-position: center;
+    /* color: #fff; */
+    padding: 0px 0;
+    text-align: center;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0px 20px;
+}
+
+.content {
+    flex: 1;
+    padding: 20px;
+}
+
+.content h1 {
+    font-size: 41px;
+    margin-bottom: 10px;
+    color: #11365e;
+}
+
+.content p {
+    text-align: justify;
+    font-size: 24px;
+    color: #333;
+}
+
+
+
+.image {
+    flex: 1;
+    text-align: center;
+}
+
+.image img {
+    width:100%;
+    height: auto;
+}
+
+.contact,.features ,.Membership{
+    background-color: white;
+    padding: 80px 0;
+    text-align: center;
+}
+
+
+
+.images {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* gap: 20px; */
+}
+
+.image2{
+    flex: 1;
+    display: inline-block;
+    justify-content: left;
+    align-items: left;
+    /* gap: 20px; */
+    margin-top: 2px;
+}
+
+.images img, .image2 img {
+    max-width: 90%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.image2 p{
+    font-size: 20px;
+    text-align: left;
+    margin: 15px;
+    color: #11365e;
+}
+
+.image2 .text{
+    margin: 20px;
+    background-color: #fff8ee;
+    border: 3px solid #ee9229;
+    padding: 5px;
+    border-radius: 10px;
+}
+
+
+.content {
+    flex: 1;
+    padding: 35px;
+    text-align: left;
+}
+
+.content p {
+    font-size: 24px;
+    line-height: 1.6;
+    color: #333;
+}
+
+.content a {
+    color: #007bff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.recommendations, .special-offers {
+    padding: 50px 0;
+    text-align: center;
+    background-color:#f0f0f0 ;
+}
+
+/* .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px 20px;
+} */
+
+.recommendations h1 {
+    font-size: 34px;
+    margin-bottom: 20px;
+}
+
+/* Style for each book */
+.books {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+.book {
+    flex: 1;
+    text-align: center;
+}
+
+.book img {
+    max-width: 90%;
+    height: 70%;
+    border-radius: 5px;
+}
+
+.price, .offer p{
+    font-size: 20px;
+    margin-top: 10px;
+    color: #ee9229;
+}
+
+.name{
+    font-size: 20px;
+    margin-top: 10px;
+    color: #11365e;
+}
+
+
+
+.add-to-cart,.offer button, .Membership button {
+    margin-top: 10px;
+    background-color: #11365e;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    padding: 8px 15px;
+    cursor: pointer;
+}
+
+.add-to-cart:hover ,.offer button:hover,.Membership button:hover{
+    background-color: #4e9aec;
+}
+
+.iconbox{
+    background-color: #ee9229;
+    border-radius: 12px;
+    width: 50%;
+    display: flex;
+    margin: auto;
+    height: auto;
+    width: 80px;
+    height: 80px;
+}
+
+.iconDes{
+    /* display: flex; */
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+    padding: 70px 50px;
+    text-align: center;
+}
+
+.iconbox img{
+    width: 50%;
+    height: 60%;
+    margin: auto;
+
+    
+}
+
+.iconDes h3{
+    /* margin-left: 40%; */
+    margin-top: 10%;
+    color: #11365e;
+    font-size: 24px;
+}
+
+.special-offers .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.special-offers h2 {
+    font-size: 34px;
+    margin-left: 12%    ;
+}
+
+.show-more {
+    background-color:#ee9229;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    padding: 8px 15px;
+    cursor: pointer;
+    margin-right: 13%;
+}
+
+.show-more:hover {
+    background-color: #e9c295;
+}
+
+.offer-images {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* gap: 20px; */
+}
+
+.offer img {
+    max-width: 100%;
+    height: 70%;
+}
+
+.offer-images h5{
+    font-size: 20px;
+    margin-top: 10px 0px;
+    color: #11365e;
+}
+
+.offer-images p{
+    font-size: 20px;
+}
+
+.offer{
+    margin: 20px;
+}
+
+.bigBox{
+   display: flex;
+   justify-content: center;
+   padding: 30px;
+   margin: 20px 60px; 
+   justify-content: space-between;
+}
+
+.smallBox{
+    width: 20%;
+    margin: 20px;
+    background-color:#ee9229;
+    padding: 20px;
+    font-size: 21px;
+    /* text-align: left; */
+    border-radius: 15px;
+    
+}
+
+.smallBox h4,.smallBox h5{
+    font-size: 28px;
+    color: #11365e;
+}
+
+.smallBox ul{
+    text-align: left;
+    margin-left: 20px;
+}
+
+
+
+</style>
+<body>
+    <header class="site-header">
+        <div class="logo">
+            <img src="images/wanderlust_words_logo-removebg-preview.png" alt="Bookstore Logo">
+        </div>
+        <!-- <nav class="categories">
+            <ul>
+                <li><a href="#">Category 1</a></li>
+                <li><a href="#">Category 2</a></li>
+                <li><a href="#">Category 3</a></li>
+                
+            </ul>
+        </nav> --> 
+        <div class="search">
+            <input type="text" placeholder="Search for books...">
+            <button type="submit">Search</button>
+        </div>
+        <div class="icons">
+            <a href="#"><img src="images/wishlist-removebg-preview.png" alt="Wishlist"></a>
+            <a href="#"><img src="images/cart-removebg-preview-removebg-preview.png" alt="Cart"></a>
+        </div>
+    </header>
+    <!-- After the closing </nav> tag for categories -->
+    <nav class="secondary-nav">
+        <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About Us</a></li>
+        <li><a href="#">Shop</a></li>
+        <li><a href="#">Blog</a></li>
+        <li><a href="#">Contact Us</a></li>
+        </ul>
+    </nav>
+
+    <section class="hero">
+        <div class="container">
+            <div class="content">
+                <h1>Welcome to our Bookstore</h1>
+                <p>Discover a world of literature and imagination. <br> Get your Favourite books at best prices. Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi reiciendis officiis similique at totam, blanditiis temporibus debitis repellendus perferendis harum </p>
+            
+                <button style="height: 37px; width: 115px;">Explore</button>
+            </div>
+            <div class="image">
+                <img src="images/book_red_girl-removebg-preview final.png" alt="Book Image">
+            </div>
+
+        </div>
+    </section>
+
+    <section class="contact">
+        <div class="container">
+            <div class="images">
+                <img src="images/plant bookks.jpeg" alt="Location Image">
+            </div>
+            <div class="image2">
+                <img src="images/good books.webp" alt="Email Image"> <br><br><br><br>
+                <div class="text">
+                    <p>-> Comics and Graphics</p>
+                    <p>-> Biography</p>
+                    <p>-> Fiction</p>
+                    <p>-> Self-Help</p>
+                    
+                </div>
+                
+                
+            </div>
+            <br><br>
+            <!-- <div class="info-box">
+            </div> -->
+            <div class="content">
+                <h1>Wanderlust Words is the best store for you</h1>
+                <p>If you have any questions or feedback, feel free to reach out to us.</p>
+                <button>Contact Us</button>
+            </div>
+
+        </div>
+    </section>
+    <!-- <hr style="height: 0px; margin: 0%;"> -->
+    <section class="recommendations">
+        <h1>Recommended For You</h1>
+        <div class="container">
+            <div class="books">
+                <div class="book">
+                    <img src="images/alchemist.jpg" alt="Book 1">
+                    <p class="name">The alchemist</p>
+                    <p class="price">$19.99</p>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+                <div class="book">
+                    <img src="images/atomic habits.jpeg" alt="Book 2">
+                    <p class="name">Atomic Habits</p>
+                    <p class="price">$24.99</p>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+                <div class="book">
+                    <img src="images/mindset.jpeg" alt="Book 3">
+                    <p class="name">Mindset</p>
+                    <p class="price">$16.99</p>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+                <div class="book">
+                    <img src="images/zero to one.jpg" alt="Book 4">
+                    <p class="name">Zero To One</p>
+                    <p class="price">$29.99</p>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+                <div class="book">
+                    <img src="images/seeker of nothing.jpeg" alt="Book 5">
+                    <p class="name">The Seeker of nothing</p>
+                    <p class="price">$21.99</p>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+            </div>
+        </div>
+        </section>
+
+    <section class ="features" style="padding: 30pxs;">
+            <div class="container">
+                <div class="iconDes">
+                    <div class="iconbox">
+                        <img src="images/star_final-removebg-preview.png" alt="icon" style="filter: invert(100%);">
+                    </div>
+                    <h3>Return Guarantee</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem, ratione!</p>
+                </div>
+                <div class="iconDes">
+                    <div class="iconbox">
+                        <img src="images/quick_delivery-removebg-preview.png" alt="icon" style="filter: invert(100%);">
+                    </div>
+                    <h3>Quick Delivery</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem, ratione!</p>
+                </div>
+                
+                <div class="iconDes">
+                    <div class="iconbox">
+                        <img src="images/like-removebg-preview.png" alt="icon">
+                    </div>
+                    <h3>Best Quality</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem, ratione!</p>
+                </div>
+                
+                <div class="iconDes">
+                    <div class="iconbox">
+                        <img src="images/secure_payment-removebg-preview.png" alt="icon">
+                    </div>
+                    <h3>Secure Payment</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem, ratione!</p>
+                </div>
+                
+            </div>
+     </section>
+
+    <section class="special-offers">
+
+        <div class="header">
+                <h2>Special Offers</h2>
+                <button class="show-more">Show More</button>
+        </div>
+        <div class="container">
+             <div class="offer-images">
+                        <div class="offer">
+                            <div>
+                                <img src="images/combo1.jpeg" alt="Offer 1">
+                            </div>
+                            <h5>The Secret + Ikigai</h5>
+                            <p>$20.5</p>
+                            <button>Add to cart</button>
+                        </div>
+                        <div class="offer">
+                            <div>
+                                <img src="images/combo2.jpeg" alt="Offer 2">
+                            </div>
+                            <h5>Colleen Hoover Special</h5>
+                            <p>$30.00</p>
+                            <button>Add to cart</button>
+                        </div>
+                        <div class="offer">
+                            <div>
+                                <img src="images/combo3.jpeg" alt="Offer 3">
+                            </div>
+                            <h5>Power + Can't Hurt Me</h5>
+                            <p>$17.50</p>
+                            <button>Add to cart</button>
+                        </div>
+                        <div class="offer">
+                            <div>
+                                <img src="images/combo4.jpeg" alt="Offer 4">
+                            </div>
+                            <h5>Twisted Series</h5>
+                            <p>$28.00</p>
+                            <button>Add to cart</button>
+                        </div>
+                        
+                    </div>
+                </div>
+            </section>
+
+    <section class="Membership">
+        <div>
+            <h2  style="font-size: 34px;">Our Membership Plans</h2>
+            <div class="bigBox">
+                <div class="smallBox">
+                    <h4>Basic Plan</h4>
+                    <h5>$45</h5>
+                    <ul>
+                        <li>Validity:1 month</li><br>
+                        <li>Books at great Offers</li><br>
+                        <li>Delivery within 36 hours</li><br>
+                        <li>Rewards at your purchases</li><br>
+                    </ul>
+                    <br><br>
+                    <button>Buy Now ></button>
+                </div>
+                <div class="smallBox">
+                    <h4>Standard Plan</h4>
+                    <h5>$70</h5>
+                    <ul>
+                        <li>Validity: 3 month</li><br>
+                        <li>Books at great Offers</li><br>
+                        <li>Delivery within 36 hours</li><br>
+                        <li>Rewards on purchases</li><br>
+                    </ul>
+                    <br><br>
+                    <button>Buy Now ></button>
+                </div>
+                <div class="smallBox">
+                    <h4>Premium Plan</h4>
+                    <h5>$120</h5>
+                    <ul>
+                        <li>Validity:1 year</li><br>
+                        <li>Books at great Offers</li><br>
+                        <li>Delivery within 24 hours</li><br>
+                        <li>Rewards on purchases</li><br>
+                    </ul>
+                    <br><br>
+                    <button>Buy Now > </button>
+                    
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
+
