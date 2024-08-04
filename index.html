@@ -554,50 +554,49 @@ button:hover{
             </div>
      </section>
 
-    <section class="special-offers">
-
-        <div class="header">
-                <h2>Special Offers</h2>
-                <button class="show-more">Show More</button>
-        </div>
-        <div class="container">
-             <div class="offer-images">
-                        <div class="offer">
-                            <div>
-                                <img src="images/combo1.jpeg" alt="Offer 1">
-                            </div>
-                            <h5>The Secret + Ikigai</h5>
-                            <p>$20.5</p>
-                            <button>Add to cart</button>
-                        </div>
-                        <div class="offer">
-                            <div>
-                                <img src="images/combo2.jpeg" alt="Offer 2">
-                            </div>
-                            <h5>Colleen Hoover Special</h5>
-                            <p>$30.00</p>
-                            <button>Add to cart</button>
-                        </div>
-                        <div class="offer">
-                            <div>
-                                <img src="images/combo3.jpeg" alt="Offer 3">
-                            </div>
-                            <h5>Power + Can't Hurt Me</h5>
-                            <p>$17.50</p>
-                            <button>Add to cart</button>
-                        </div>
-                        <div class="offer">
-                            <div>
-                                <img src="images/combo4.jpeg" alt="Offer 4">
-                            </div>
-                            <h5>Twisted Series</h5>
-                            <p>$28.00</p>
-                            <button>Add to cart</button>
-                        </div>
-                        
-                    </div>
+<section class="special-offers">
+    <div class="header">
+        <h2>Special Offers</h2>
+        <button class="show-more">Show More</button>
+    </div>
+    <div class="container">
+        <div class="offer-images">
+            <div class="offer">
+                <div>
+                    <img src="images/combo1.jpeg" alt="Offer 1">
                 </div>
-            </section>
+                <h5>The Secret + Ikigai</h5>
+                <p>$20.5</p>
+                <button class="atc">Add to cart</button>
+            </div>
+            <div class="offer">
+                <div>
+                    <img src="images/combo2.jpeg" alt="Offer 2">
+                </div>
+                <h5>Colleen Hoover Special</h5>
+                <p>$30.00</p>
+                <button class="atc">Add to cart</button>
+            </div>
+            <div class="offer">
+                <div>
+                    <img src="images/combo3.jpeg" alt="Offer 3">
+                </div>
+                <h5>Power + Can't Hurt Me</h5>
+                <p>$17.50</p>
+                <button class="atc">Add to cart</button>
+            </div>
+            <div class="offer">
+                <div>
+                    <img src="images/combo4.jpeg" alt="Offer 4">
+                </div>
+                <h5>Twisted Series</h5>
+                <p>$28.00</p>
+                <button class="atc">Add to cart</button>
+            </div>
+        </div>
+    </div>
+</section>
+
 
     <section class="Membership" id="Me">
         <div>
@@ -643,6 +642,20 @@ button:hover{
             </div>
         </div>
     </section>
+
+    <script>
+    document.querySelectorAll(".add-to-cart").forEach(button => {
+        button.addEventListener("click", function() {
+            alert("Book added to cart");
+        });
+    });
+
+    document.querySelectorAll(".atc").forEach(button => {
+        button.addEventListener("click", function() {
+            alert("Book added to cart");
+        });
+    });
+</script>
 </body>
 </html>
 
